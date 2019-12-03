@@ -9,6 +9,7 @@ export default new vuex.Store({
     posts: []
   },
   actions: {
+    //   親のApp.vueコンポーネントに呼び出してもらう
     loadPosts () {
         console.log('load posts')
     }
