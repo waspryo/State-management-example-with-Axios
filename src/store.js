@@ -11,7 +11,12 @@ export default new vuex.Store({
   actions: {
     //   親のApp.vueコンポーネントに呼び出してもらう
     loadPosts () {
-        console.log('load posts')
+        axios.get('https://jsonplaceholder.typicode.com/posts')
+        .then(res => {
+            console.log(res.data)
+        }).catch(error => {
+            console.log(error)
+        })
     }
   },
   mutations: {
